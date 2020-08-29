@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tottho</string>
+    <string name="profile">Profile</string>
+    <string name="education">Education</string>
+    <string name="events">Events</string>
+    <string name="scholarship_portal">Scholarship Portal</string>
+    <string name="logout">Logout</string>
 </resources>
