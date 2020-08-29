@@ -3,6 +3,13 @@
     <string name="profile">Profile</string>
     <string name="education">Education</string>
     <string name="events">Events</string>
+    <string name="government">Government</string>
     <string name="scholarship_portal">Scholarship Portal</string>
     <string name="logout">Logout</string>
+    <string name="team_travers">Team Travers</string>
+    <string name="developed_by">Developed By</string>
+    <string name="education_moto_for_tour_page">Get all education related information</string>
+    <string name="events_moto_for_tour_page">You will get recent happening events details</string>
+    <string name="government_moto_for_tour_page">All government circulars and details</string>
+    <string name="scholarship_moto_for_tour_page">Recent scholarship news and their details</string>
 </resources>

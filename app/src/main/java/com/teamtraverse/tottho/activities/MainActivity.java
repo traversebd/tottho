@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         navRecycler = findViewById(R.id.list);
         drawerButton = findViewById(R.id.DrawerButton);
     }
+    //endregion
 
     private void bindUIWithComponents() {
         //region set drawer adapter
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new NavDrawer(R.drawable.ic_education,getString(R.string.education)));
         items.add(new NavDrawer(R.drawable.ic_events,getString(R.string.events)));
         items.add(new NavDrawer(R.drawable.ic_scholarship,getString(R.string.scholarship_portal)));
+        items.add(new NavDrawer(R.drawable.ic_government,getString(R.string.government)));
         items.add(new NavDrawer(R.drawable.ic_logout,getString(R.string.logout)));
         return items;
     }
