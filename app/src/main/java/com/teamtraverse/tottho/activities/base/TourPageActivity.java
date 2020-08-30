@@ -1,4 +1,4 @@
-package com.teamtraverse.tottho.activities;
+package com.teamtraverse.tottho.activities.base;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;

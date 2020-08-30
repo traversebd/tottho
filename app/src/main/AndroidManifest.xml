@@ -9,18 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.base.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.TourPageActivity"
+        <activity
+            android:name=".activities.base.auth.RegistrationActivity"
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.base.auth.LoginActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.base.TourPageActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.base.MainActivity"
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />
     </application>

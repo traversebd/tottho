@@ -1,4 +1,4 @@
-package com.teamtraverse.tottho.activities;
+package com.teamtraverse.tottho.activities.base;
 
 import android.os.Bundle;
 import android.view.View;
