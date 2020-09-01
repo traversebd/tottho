@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.base.auth.GenericAuthActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
             android:name=".activities.base.auth.RegistrationActivity"
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />

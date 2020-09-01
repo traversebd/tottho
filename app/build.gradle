@@ -59,6 +59,11 @@ dependencies {
     //sliding root nav
     implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
 
+    // library for shape
+    implementation 'com.github.florent37:shapeofview:1.4.4'
+    // android custom switcher
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
