@@ -1,10 +1,11 @@
 package com.teamtraverse.tottho.activities.base.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import com.teamtraverse.tottho.R;
+import com.teamtraverse.tottho.activities.base.TourPageActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -25,6 +26,12 @@ public class LoginActivity extends AppCompatActivity {
     //endregion
 
     private void bindUIWithComponents() {
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, TourPageActivity.class));
+            }
+        });
     }
     //endregion
 }
