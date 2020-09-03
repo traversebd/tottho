@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.4"
-                android:layout_margin="4dp"
+                android:layout_margin="16dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -195,6 +195,8 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginTop="16dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -212,6 +214,7 @@
                             android:layout_height="32dp" />
 
                         <TextView
+                            android:id="@+id/rememberMeText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -237,10 +240,10 @@
                     android:textColor="@color/md_white_1000"
                     android:textAllCaps="false"
                     android:textSize="18sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:background="@drawable/button_shape_round_corner"/>
 
             </LinearLayout>
-
 
         </LinearLayout>
 

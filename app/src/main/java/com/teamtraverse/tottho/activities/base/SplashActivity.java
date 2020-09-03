@@ -13,6 +13,7 @@ import com.teamtraverse.tottho.activities.base.auth.GenericAuthActivity;
 import com.teamtraverse.tottho.tools.PrefManager;
 import static com.teamtraverse.tottho.tools.Constants.mAlreadyVisited;
 import static com.teamtraverse.tottho.tools.Constants.mIsLoggedIn;
+import static com.teamtraverse.tottho.tools.Constants.mIsRemembered;
 
 public class SplashActivity extends AppCompatActivity {
     private Animation topAnim, middleAnim, bottomAnim;
@@ -55,11 +56,16 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent;
-                if (prefManager.getBoolean(mIsLoggedIn)) {
-                    if (prefManager.getBoolean(mAlreadyVisited)) {
-                        intent = new Intent(SplashActivity.this, MainActivity.class);
-                    } else {
-                        intent = new Intent(SplashActivity.this, TourPageActivity.class);
+                if (prefManager.getBoolean(mIsRemembered)){
+                    if (prefManager.getBoolean(mIsLoggedIn)) {
+                        if (prefManager.getBoolean(mAlreadyVisited)) {
+                            intent = new Intent(SplashActivity.this, MainActivity.class);
+                        } else {
+                            intent = new Intent(SplashActivity.this, TourPageActivity.class);
+                        }
+                    }
+                    else {
+                        intent = new Intent(SplashActivity.this, GenericAuthActivity.class);
                     }
                 }
                 else{

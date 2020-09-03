@@ -1,5 +1,6 @@
 package com.teamtraverse.tottho.activities.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -84,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //endregion
+    }
+    //endregion
+
+    //region start activity
+    private void showActivity(Class activity) {
+        startActivity(new Intent(MainActivity.this,activity));
     }
     //endregion
 
