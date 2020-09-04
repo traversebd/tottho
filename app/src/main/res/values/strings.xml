@@ -46,4 +46,7 @@
     <string name="demo_mobile">01XXX-XXXXXX</string>
     <string name="demo_website_link">sample.com</string>
     <string name="demo_address">Sample,Dhaka</string>
+    <string name="demo_name">Sample Name</string>
+    <string name="search_here">Search your queries here</string>
+    <string name="enter_your_query">Enter your query</string>
 </resources>

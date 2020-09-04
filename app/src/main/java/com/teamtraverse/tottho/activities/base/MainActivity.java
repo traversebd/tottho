@@ -52,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         setDrawerAdapter();
         //endregion
 
+        //region set recent link recycler adapter
+        setRecentlyViewedRecyclerAdapter();
+        //endregion
+
         //region drawer hum-burger icon
         drawerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //endregion
+    }
+    //endregion
+
+    //region set recent link recycler adapter
+    private void setRecentlyViewedRecyclerAdapter(){
+
     }
     //endregion
 

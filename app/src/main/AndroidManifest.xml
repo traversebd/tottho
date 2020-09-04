@@ -36,6 +36,26 @@
             android:name=".activities.base.MainActivity"
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.scholarship.ScholarshipActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.profile.ProfileActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.government.GovernmentActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.events.EventsActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.education.EducationActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
     </application>
 
 </manifest>
