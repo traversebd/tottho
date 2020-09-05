@@ -10,7 +10,7 @@ import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.TourPageActivity;
 import com.teamtraverse.tottho.tools.PrefManager;
 import static com.teamtraverse.tottho.tools.Constants.mIsLoggedIn;
-import static com.teamtraverse.tottho.tools.Constants.mIsRemembered;
+import static com.teamtraverse.tottho.tools.Constants.mShouldRemember;
 
 public class RegistrationActivity extends AppCompatActivity {
     private PrefManager prefManager;
@@ -53,11 +53,11 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(SwitchButton view, boolean isChecked) {
                 if (isChecked){
-                    prefManager.set(mIsRemembered, true);
+                    prefManager.set(mShouldRemember, true);
                     rememberMeText.setTextColor(getColor(R.color.md_green_600));
                 }
                 else{
-                    prefManager.set(mIsRemembered, false);
+                    prefManager.set(mShouldRemember, false);
                     rememberMeText.setTextColor(getColor(R.color.md_grey_800));
                 }
             }

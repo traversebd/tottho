@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
+import com.teamtraverse.tottho.activities.education.EducationActivity;
+import com.teamtraverse.tottho.activities.events.EventsActivity;
+import com.teamtraverse.tottho.activities.government.GovernmentActivity;
+import com.teamtraverse.tottho.activities.profile.ProfileActivity;
+import com.teamtraverse.tottho.activities.scholarship.ScholarshipActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
@@ -85,6 +90,24 @@ public class MainActivity extends AppCompatActivity {
         drawerRecyclerAdapter.setOnItemClickListener(new NavDrawerRecyclerAdapter.onItemClickListener() {
             @Override
             public void onItemClick(NavDrawer navDrawer) {
+                if (navDrawer.getIcon() == R.drawable.ic_user){
+                    showActivity(ProfileActivity.class);
+                }
+                else if (navDrawer.getIcon() == R.drawable.ic_education){
+                    showActivity(EducationActivity.class);
+                }
+                else if (navDrawer.getIcon() == R.drawable.ic_events){
+                    showActivity(EventsActivity.class);
+                }
+                else if (navDrawer.getIcon() == R.drawable.ic_scholarship){
+                    showActivity(ScholarshipActivity.class);
+                }
+                else if (navDrawer.getIcon() == R.drawable.ic_government){
+                    showActivity(GovernmentActivity.class);
+                }
+                else if (navDrawer.getIcon() == R.drawable.ic_logout){
+
+                }
                 slidingRootNav.closeMenu();
             }
         });

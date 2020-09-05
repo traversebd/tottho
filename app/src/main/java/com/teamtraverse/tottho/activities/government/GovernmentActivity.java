@@ -10,5 +10,22 @@ public class GovernmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_government);
+
+        //region initUI and then perform all UI actions
+        initUI();
+        bindUIWithComponents();
+        //endregion
     }
+
+    //region initUI
+    private void initUI(){
+
+    }
+    //endregion
+
+    //region perform all UI interactions
+    private void bindUIWithComponents(){
+
+    }
+    //endregion
 }
