@@ -14,7 +14,9 @@ import com.teamtraverse.tottho.activities.government.GovernmentActivity;
 import com.teamtraverse.tottho.activities.profile.ProfileActivity;
 import com.teamtraverse.tottho.activities.scholarship.ScholarshipActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
+import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
+import com.teamtraverse.tottho.models.link.Link;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private SlidingRootNav slidingRootNav;
     private ImageView drawerButton;
-    private RecyclerView navRecycler;
+    private RecyclerView navRecycler, recentlyViewedRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private void initUI() {
         navRecycler = findViewById(R.id.list);
         drawerButton = findViewById(R.id.DrawerButton);
+        recentlyViewedRecycler = findViewById(R.id.mRecyclerView);
     }
     //endregion
 
@@ -117,7 +120,10 @@ public class MainActivity extends AppCompatActivity {
 
     //region set recent link recycler adapter
     private void setRecentlyViewedRecyclerAdapter(){
-
+        RecyclerAdapterRecentlyViewedLink recyclerAdapter = new RecyclerAdapterRecentlyViewedLink(getRecentlyViewedLink());
+        recentlyViewedRecycler.setLayoutManager(new LinearLayoutManager(this));
+        recentlyViewedRecycler.setAdapter(recyclerAdapter);
+        recyclerAdapter.notifyDataSetChanged();
     }
     //endregion
 
@@ -140,4 +146,13 @@ public class MainActivity extends AppCompatActivity {
     }
     //endregion
 
+    //region get recycler items for recently viewed links
+    private ArrayList<Link> getRecentlyViewedLink(){
+        ArrayList<Link> linkArrayList = new ArrayList<>();
+        linkArrayList.add(new Link(1,"Daffodil International University","daffodilvarsity@diu.edu.bd","+880-1739-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka"));
+        linkArrayList.add(new Link(1,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka"));
+        linkArrayList.add(new Link(1,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka"));
+        return linkArrayList;
+    }
+    //endregion
 }

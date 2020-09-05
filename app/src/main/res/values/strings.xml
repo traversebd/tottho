@@ -49,4 +49,5 @@
     <string name="demo_name">Sample Name</string>
     <string name="search_here">Search your queries here</string>
     <string name="enter_your_query">Enter your query</string>
+    <string name="demo_username">John Doe</string>
 </resources>
