@@ -1,23 +1,43 @@
 package com.teamtraverse.tottho.models.link;
 
-public class Link {
+public class Post {
     private int Id;
     private String Name;
     private String Email;
     private String MobileNumber;
     private String WebUrl;
     private String Address;
+    private int UserId;
+    private String PostDate;
 
-    public Link() {
+    public Post() {
     }
 
-    public Link(int id, String name, String email, String mobileNumber, String webUrl, String address) {
+    public Post(int id, String name, String email, String mobileNumber, String webUrl, String address, int userId, String postDate) {
         Id = id;
         Name = name;
         Email = email;
         MobileNumber = mobileNumber;
         WebUrl = webUrl;
         Address = address;
+        UserId = userId;
+        PostDate = postDate;
+    }
+
+    public int getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(int userId) {
+        UserId = userId;
+    }
+
+    public String getPostDate() {
+        return PostDate;
+    }
+
+    public void setPostDate(String postDate) {
+        PostDate = postDate;
     }
 
     public int getId() {

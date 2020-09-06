@@ -36,9 +36,9 @@
     <string name="welcome_back">Welcome back</string>
     <string name="sign_up_here">Sign Up Here</string>
     <string name="your_stats">Your Statistics</string>
-    <string name="number_of_post_you_viewed">Number of post you viewed</string>
+    <string name="number_of_post_you_viewed">Number of post viewed</string>
     <string name="zero">0</string>
-    <string name="number_of_post_saved">Number of post you saved</string>
+    <string name="number_of_post_saved">Number of post saved</string>
     <string name="recently_viewed">Recently viewed</string>
     <string name="nodata">No data available</string>
     <string name="no_post_viewed">You didnt viewed any post</string>
@@ -50,4 +50,8 @@
     <string name="search_here">Search your queries here</string>
     <string name="enter_your_query">Enter your query</string>
     <string name="demo_username">John Doe</string>
+    <string name="date_hint">DD-MM-YYYY</string>
+    <string name="post_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+    <string name="likes_count_demo">110</string>
 </resources>

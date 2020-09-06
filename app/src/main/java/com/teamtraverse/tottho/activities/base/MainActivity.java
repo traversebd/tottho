@@ -16,7 +16,7 @@ import com.teamtraverse.tottho.activities.scholarship.ScholarshipActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
-import com.teamtraverse.tottho.models.link.Link;
+import com.teamtraverse.tottho.models.link.Post;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
@@ -147,12 +147,12 @@ public class MainActivity extends AppCompatActivity {
     //endregion
 
     //region get recycler items for recently viewed links
-    private ArrayList<Link> getRecentlyViewedLink(){
-        ArrayList<Link> linkArrayList = new ArrayList<>();
-        linkArrayList.add(new Link(1,"Daffodil International University","daffodilvarsity@diu.edu.bd","+880-1739-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka"));
-        linkArrayList.add(new Link(1,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka"));
-        linkArrayList.add(new Link(1,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka"));
-        return linkArrayList;
+    private ArrayList<Post> getRecentlyViewedLink(){
+        ArrayList<Post> postArrayList = new ArrayList<>();
+        postArrayList.add(new Post(1,"Daffodil International University","daffodilvarsity@diu.edu.bd","+880-1739-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka",1,"10-Jan-2020"));
+        postArrayList.add(new Post(1,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka",2,"30-Jun-2019"));
+        postArrayList.add(new Post(1,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka",2,"20-Aug-2018"));
+        return postArrayList;
     }
     //endregion
 }

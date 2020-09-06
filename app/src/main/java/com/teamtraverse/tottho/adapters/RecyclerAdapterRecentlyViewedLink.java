@@ -7,14 +7,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
-import com.teamtraverse.tottho.models.link.Link;
+import com.teamtraverse.tottho.models.link.Post;
+
 import java.util.ArrayList;
 
 public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<RecyclerAdapterRecentlyViewedLink.ViewHolder> {
-    private ArrayList<Link> listOfLinks;
+    private ArrayList<Post> listOfPosts;
 
-    public RecyclerAdapterRecentlyViewedLink(ArrayList<Link> listOfLinks) {
-        this.listOfLinks = listOfLinks;
+    public RecyclerAdapterRecentlyViewedLink(ArrayList<Post> listOfPosts) {
+        this.listOfPosts = listOfPosts;
     }
 
     @NonNull
@@ -25,17 +26,17 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Link link = listOfLinks.get(position);
-        holder.Name.setText(link.getName());
-        holder.Email.setText(link.getEmail());
-        holder.MobileNumber.setText(link.getMobileNumber());
-        holder.WebUrl.setText(link.getWebUrl());
-        holder.Address.setText(link.getAddress());
+        Post post = listOfPosts.get(position);
+        holder.Name.setText(post.getName());
+        holder.Email.setText(post.getEmail());
+        holder.MobileNumber.setText(post.getMobileNumber());
+        holder.WebUrl.setText(post.getWebUrl());
+        holder.Address.setText(post.getAddress());
     }
 
     @Override
     public int getItemCount() {
-        return listOfLinks.size();
+        return listOfPosts.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
