@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/app_name"
+            android:text="@string/home"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginTop="4dp"
@@ -52,9 +52,105 @@
 
     </LinearLayout>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SearchLayout"
+        android:layout_below="@id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="0dp"
+        android:translationZ="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/md_white_1000"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@id/TotthoHeading"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/md_cyan_800"/>
+
+                <TextView
+                    android:id="@+id/TotthoHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_here"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@id/SearchEditText"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/md_cyan_800"/>
+
+                <EditText
+                    android:id="@+id/SearchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:hint="@string/enter_your_query"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textColor="@color/md_white_1000"
+                    android:background="@drawable/rectangle_background_edit_text"/>
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_below="@id/SearchEditText"
+                    android:layout_marginTop="8dp"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:background="@drawable/a_roundbg"
+                    android:translationZ="4dp">
+
+                    <ImageView
+                        android:id="@+id/SearchButton"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_search"
+                        android:padding="4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
-        android:layout_below="@id/app_bar"
+        android:layout_below="@id/SearchLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -66,190 +162,6 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp"
-                android:elevation="6dp"
-                android:translationZ="3dp"
-                app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/md_white_1000"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/your_stats"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textAllCaps="true"
-                        android:textColor="@color/md_cyan_800"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|left"
-                        android:gravity="center|left"
-                        android:weightSum="2"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/md_grey_800"
-                            android:text="@string/number_of_post_you_viewed"/>
-
-                        <LinearLayout
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
-                            android:layout_marginTop="4dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginLeft="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:background="@drawable/a_roundbg"
-                            android:translationZ="4dp">
-
-                            <TextView
-                                android:id="@+id/numberOfPostViewed"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="@color/md_cyan_800"
-                                android:text="@string/zero" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|left"
-                        android:gravity="center|left"
-                        android:weightSum="2"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/md_grey_800"
-                            android:text="@string/number_of_post_saved"/>
-
-                        <LinearLayout
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
-                            android:layout_marginTop="4dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginLeft="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:background="@drawable/a_roundbg"
-                            android:translationZ="4dp">
-
-                            <TextView
-                                android:id="@+id/numberOfPostSaved"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="@color/md_cyan_800"
-                                android:text="@string/zero"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="272dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
-            android:elevation="6dp"
-            android:translationZ="3dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/md_white_1000"
-            app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/search_here"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    android:textColor="@color/md_cyan_800"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_gravity="center">
-
-                    <EditText
-                        android:id="@+id/SearchEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:layout_centerInParent="true"
-                        android:hint="@string/enter_your_query"
-                        android:textColorHint="@color/md_grey_600"
-                        android:background="@drawable/rectangle_background_edittext"/>
-
-                    <LinearLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_below="@id/SearchEditText"
-                        android:layout_marginTop="8dp"
-                        android:elevation="8dp"
-                        android:gravity="center"
-                        android:layout_centerHorizontal="true"
-                        android:orientation="vertical"
-                        android:background="@drawable/a_roundbg"
-                        android:translationZ="4dp">
-
-                        <ImageView
-                            android:id="@+id/SearchButton"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_search"
-                            android:padding="4dp" />
-
-                    </LinearLayout>
-
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
@@ -283,10 +195,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:orientation="vertical"
-                        xmlns:android="http://schemas.android.com/apk/res/android">
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/NoDataMessage"
@@ -306,8 +217,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            tools:listitem="@layout/adapter_recycler_post"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            tools:listitem="@layout/adapter_recycler_post" />
 
                     </LinearLayout>
 
