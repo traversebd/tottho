@@ -229,71 +229,64 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView"
+    <LinearLayout
         android:layout_below="@id/userDetailsLayout"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="8dp">
 
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <View
+                    android:id="@+id/label1"
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:background="@color/md_cyan_600" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:paddingBottom="4dp"
-                    android:paddingTop="4dp">
-
-                    <View
-                        android:id="@+id/label1"
-                        android:layout_width="8dp"
-                        android:layout_height="32dp"
-                        android:background="@color/md_cyan_600" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/label1"
-                        android:layout_centerInParent="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginBottom="6dp"
-                        android:layout_toEndOf="@+id/label1"
-                        android:layout_toRightOf="@+id/label1"
-                        android:text="@string/recent_posts_by_you"
-                        android:textColor="@color/md_blue_grey_600"
-                        android:textSize="14sp" />
-
-                </RelativeLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/mRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_alignTop="@+id/label1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    tools:listitem="@layout/adapter_recycler_recent_post"/>
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@+id/label1"
+                    android:layout_toRightOf="@+id/label1"
+                    android:text="@string/recent_posts_by_you"
+                    android:textColor="@color/md_blue_grey_600"
+                    android:textSize="14sp" />
 
-            </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:listitem="@layout/adapter_recycler_recent_post"/>
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

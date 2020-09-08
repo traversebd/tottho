@@ -1,8 +1,12 @@
 package com.teamtraverse.tottho.activities.scholarship;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import com.teamtraverse.tottho.R;
+import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.activities.government.GovernmentActivity;
 
 public class ScholarshipActivity extends AppCompatActivity {
 
@@ -25,7 +29,14 @@ public class ScholarshipActivity extends AppCompatActivity {
 
     //region perform all UI interactions
     private void bindUIWithComponents(){
-
+        //region back button click listener
+        findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ScholarshipActivity.this, MainActivity.class));
+            }
+        });
+        //endregion
     }
     //endregion
 }

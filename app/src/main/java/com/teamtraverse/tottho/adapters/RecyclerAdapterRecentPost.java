@@ -29,7 +29,6 @@ public class RecyclerAdapterRecentPost extends RecyclerView.Adapter<RecyclerAdap
         holder.Name.setText(post.getName());
         holder.Email.setText(post.getEmail());
         holder.MobileNumber.setText(post.getMobileNumber());
-        holder.PostDate.setText(post.getPostDate());
     }
 
     @Override
@@ -38,13 +37,12 @@ public class RecyclerAdapterRecentPost extends RecyclerView.Adapter<RecyclerAdap
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView Name,Email,MobileNumber,PostDate,Address;
+        TextView Name,Email,MobileNumber;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             Name = itemView.findViewById(R.id.Name);
             Email = itemView.findViewById(R.id.Email);
             MobileNumber = itemView.findViewById(R.id.MobileNo);
-            PostDate = itemView.findViewById(R.id.PostDate);
         }
     }
 }
