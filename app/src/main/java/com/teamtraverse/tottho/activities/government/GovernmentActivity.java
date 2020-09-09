@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
-import com.teamtraverse.tottho.activities.education.EducationActivity;
 
 public class GovernmentActivity extends AppCompatActivity {
 
