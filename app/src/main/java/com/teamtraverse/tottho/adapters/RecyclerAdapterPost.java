@@ -11,10 +11,10 @@ import com.teamtraverse.tottho.models.link.Post;
 
 import java.util.ArrayList;
 
-public class RecyclerAdapterLink extends RecyclerView.Adapter<RecyclerAdapterLink.ViewHolder> {
+public class RecyclerAdapterPost extends RecyclerView.Adapter<RecyclerAdapterPost.ViewHolder> {
     private ArrayList<Post> listOfPosts;
 
-    public RecyclerAdapterLink(ArrayList<Post> listOfPosts) {
+    public RecyclerAdapterPost(ArrayList<Post> listOfPosts) {
         this.listOfPosts = listOfPosts;
     }
 
