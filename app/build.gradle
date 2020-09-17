@@ -64,6 +64,9 @@ dependencies {
     // android custom switcher
     implementation 'com.github.zcweng:switch-button:0.0.3@aar'
 
+    //google play auth services
+    implementation 'com.google.android.gms:play-services-auth:11.6.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

@@ -1,6 +1,7 @@
 package com.teamtraverse.tottho.tools;
 
 import android.content.Context;
+import android.content.Intent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -34,5 +35,12 @@ public class UtilsManager {
                 .client(builder.build())
                 .build();
         return retrofit;
+    }
+
+    public static void exitApp(Context context){
+        Intent exitIntent = new Intent(Intent.ACTION_MAIN);
+        exitIntent.addCategory(Intent.CATEGORY_HOME);
+        exitIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(exitIntent);
     }
 }

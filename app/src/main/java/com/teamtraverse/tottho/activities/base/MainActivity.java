@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
+import com.teamtraverse.tottho.activities.base.auth.GenericAuthActivity;
+import com.teamtraverse.tottho.activities.base.auth.RegistrationActivity;
 import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.activities.government.GovernmentActivity;
@@ -17,9 +19,12 @@ import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
 import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.tools.UtilsManager;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
+
+import static com.teamtraverse.tottho.tools.UtilsManager.exitApp;
 
 public class MainActivity extends AppCompatActivity {
     private SlidingRootNav slidingRootNav;
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     showActivity(GovernmentActivity.class);
                 }
                 else if (navDrawer.getIcon() == R.drawable.ic_logout){
-
+                    startActivity(new Intent(MainActivity.this, GenericAuthActivity.class));
                 }
                 slidingRootNav.closeMenu();
             }
@@ -153,6 +158,13 @@ public class MainActivity extends AppCompatActivity {
         postArrayList.add(new Post(2,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka",2,"30-Jun-2019"));
         postArrayList.add(new Post(3,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka",2,"20-Aug-2018"));
         return postArrayList;
+    }
+    //endregion
+
+    //region activity components
+    @Override
+    public void onBackPressed() {
+        exitApp(MainActivity.this);
     }
     //endregion
 }

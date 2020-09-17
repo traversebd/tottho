@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterPost;
 import com.teamtraverse.tottho.models.link.Post;
 import java.util.ArrayList;
@@ -72,6 +73,13 @@ public class EventsActivity extends AppCompatActivity {
         postArrayList.add(new Post(2,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka",2,"30-Jun-2019"));
         postArrayList.add(new Post(3,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka",2,"20-Aug-2018"));
         return postArrayList;
+    }
+    //endregion
+
+    //region activity components
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(EventsActivity.this,MainActivity.class));
     }
     //endregion
 }

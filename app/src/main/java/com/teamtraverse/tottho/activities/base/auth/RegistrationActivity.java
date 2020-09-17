@@ -65,4 +65,11 @@ public class RegistrationActivity extends AppCompatActivity {
         //endregion
     }
     //endregion
+
+    //region activity components
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(RegistrationActivity.this,GenericAuthActivity.class));
+    }
+    //endregion
 }
