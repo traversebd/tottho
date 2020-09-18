@@ -1,10 +1,14 @@
 package com.teamtraverse.tottho.activities.base;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
@@ -24,6 +28,7 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
 
+import static com.teamtraverse.tottho.tools.Constants.REQUEST_CALL_CODE;
 import static com.teamtraverse.tottho.tools.UtilsManager.exitApp;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
     //endregion
 
     private void bindUIWithComponents() {
+
+        //region ask permission
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL_CODE);
+        }
+        //endregion
+
         //region set drawer adapter
         setDrawerAdapter();
         //endregion
@@ -125,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
     //region set recent link recycler adapter
     private void setRecentlyViewedRecyclerAdapter(){
-        RecyclerAdapterRecentlyViewedLink recyclerAdapter = new RecyclerAdapterRecentlyViewedLink(getRecentlyViewedLink());
+        RecyclerAdapterRecentlyViewedLink recyclerAdapter = new RecyclerAdapterRecentlyViewedLink(getRecentlyViewedLink(),MainActivity.this,MainActivity.this);
         recentlyViewedRecycler.setLayoutManager(new LinearLayoutManager(this));
         recentlyViewedRecycler.setAdapter(recyclerAdapter);
         recyclerAdapter.notifyDataSetChanged();

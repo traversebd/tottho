@@ -10,4 +10,5 @@ public class Constants {
     public static final String mUserId = "UserId";
     public static final String mUserEmail = "UserEmail";
     public static final String mUserMobile = "UserMobile";
+    public static final int REQUEST_CALL_CODE = 1111;
 }

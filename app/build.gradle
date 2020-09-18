@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 
     //lottie animation loader
-    implementation 'com.airbnb.android:lottie:2.5.0-rc1'
+    implementation 'com.airbnb.android:lottie:3.4.2'
     //lifecycle components
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"

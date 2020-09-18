@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import com.airbnb.lottie.LottieAnimationView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.auth.GenericAuthActivity;
 import com.teamtraverse.tottho.tools.PrefManager;
@@ -19,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
     private Animation topAnim, middleAnim, bottomAnim;
     private View first,second,third,fourth,fifth;
     private TextView AppName, DevelopedBy, Developer;
+    private LottieAnimationView helloAnimationView;
     private PrefManager prefManager;
 
     @Override
@@ -42,6 +44,7 @@ public class SplashActivity extends AppCompatActivity {
         AppName = findViewById(R.id.AppName);
         DevelopedBy = findViewById(R.id.DevelopedBy);
         Developer = findViewById(R.id.DeveloperName);
+        helloAnimationView = findViewById(R.id.helloAnimation);
         prefManager = new PrefManager(this);
     }
     //endregion
@@ -74,7 +77,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 2500);
     }
     //endregion
 
@@ -97,6 +100,7 @@ public class SplashActivity extends AppCompatActivity {
         AppName.setAnimation(middleAnim);
         DevelopedBy.setAnimation(bottomAnim);
         Developer.setAnimation(bottomAnim);
+        helloAnimationView.animate().translationY(1400).setDuration(1000).setStartDelay(4000);
     }
     //endregion
 }

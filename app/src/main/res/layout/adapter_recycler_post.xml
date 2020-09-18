@@ -179,6 +179,7 @@
                 android:translationZ="4dp">
 
                 <ImageView
+                    android:id="@+id/callIcon"
                     android:src="@drawable/ic_call"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
