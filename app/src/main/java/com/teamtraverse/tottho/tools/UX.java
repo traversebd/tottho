@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
 import com.teamtraverse.tottho.R;
@@ -120,6 +121,15 @@ public class UX {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width,height);
         layoutParams.gravity = gravity;
         return layoutParams;
+    }
+    //endregion
+
+    //region change searchView text hint color
+    public void changeSearchViewHintTextColor(SearchView searchView, int colorResId){
+        LinearLayout ll = (LinearLayout)searchView.getChildAt(0); LinearLayout ll2 = (LinearLayout)ll.getChildAt(2);
+        LinearLayout ll3 = (LinearLayout)ll2.getChildAt(1);
+        SearchView.SearchAutoComplete autoComplete = ((SearchView.SearchAutoComplete)ll3.getChildAt(0));
+        autoComplete.setHintTextColor(context.getResources().getColor(colorResId));
     }
     //endregion
 }

@@ -6,14 +6,15 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.auth.GenericAuthActivity;
-import com.teamtraverse.tottho.activities.base.auth.RegistrationActivity;
 import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.activities.government.GovernmentActivity;
@@ -23,7 +24,7 @@ import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
 import com.teamtraverse.tottho.models.link.Post;
-import com.teamtraverse.tottho.tools.UtilsManager;
+import com.teamtraverse.tottho.tools.UX;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     private SlidingRootNav slidingRootNav;
     private ImageView drawerButton;
     private RecyclerView navRecycler, recentlyViewedRecycler;
+    private SearchView searchView;
+    private UX ux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         navRecycler = findViewById(R.id.list);
         drawerButton = findViewById(R.id.DrawerButton);
         recentlyViewedRecycler = findViewById(R.id.mRecyclerView);
+        searchView = findViewById(R.id.SearchText);
+        ux = new UX(this);
     }
     //endregion
 
@@ -96,6 +101,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //endregion
+
+        //region searchView operations
+        ux.changeSearchViewHintTextColor(searchView, R.color.md_white_1000);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+        //endregion
     }
     //endregion
 
@@ -126,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     showActivity(GovernmentActivity.class);
                 }
                 else if (navDrawer.getIcon() == R.drawable.ic_logout){
-                    startActivity(new Intent(MainActivity.this, GenericAuthActivity.class));
+                    showActivity(GenericAuthActivity.class);
                 }
                 slidingRootNav.closeMenu();
             }
@@ -137,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
     //region set recent link recycler adapter
     private void setRecentlyViewedRecyclerAdapter(){
-        RecyclerAdapterRecentlyViewedLink recyclerAdapter = new RecyclerAdapterRecentlyViewedLink(getRecentlyViewedLink(),MainActivity.this,MainActivity.this);
+        RecyclerAdapterRecentlyViewedLink recyclerAdapter = new RecyclerAdapterRecentlyViewedLink(getRecentlyViewedLink(),MainActivity.this);
         recentlyViewedRecycler.setLayoutManager(new LinearLayoutManager(this));
         recentlyViewedRecycler.setAdapter(recyclerAdapter);
         recyclerAdapter.notifyDataSetChanged();

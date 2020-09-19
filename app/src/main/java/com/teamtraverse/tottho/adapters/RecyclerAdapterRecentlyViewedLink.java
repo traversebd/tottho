@@ -22,12 +22,10 @@ import java.util.ArrayList;
 
 public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<RecyclerAdapterRecentlyViewedLink.ViewHolder> {
     private ArrayList<Post> listOfPosts;
-    private Activity activity;
     private Context context;
 
-    public RecyclerAdapterRecentlyViewedLink(ArrayList<Post> listOfPosts, Activity activity, Context context) {
+    public RecyclerAdapterRecentlyViewedLink(ArrayList<Post> listOfPosts, Context context) {
         this.listOfPosts = listOfPosts;
-        this.activity = activity;
         this.context = context;
     }
 
@@ -57,7 +55,7 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
                     context.startActivity(callIntent);
                 } else {
                     Toast.makeText(context, "Please allow call permission", Toast.LENGTH_SHORT).show();
-                    new PermissionManager().askCallPermission(activity);
+                    new PermissionManager().askCallPermission((Activity) context);
                 }
             }
         });
