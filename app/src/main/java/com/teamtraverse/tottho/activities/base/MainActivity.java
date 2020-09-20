@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         //endregion
 
         //region searchView operations
-        ux.changeSearchViewHintTextColor(searchView, R.color.md_white_1000);
+        ux.changeSearchViewHintAndTextColor(searchView, R.color.md_white_1000);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {

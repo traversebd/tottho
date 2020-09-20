@@ -10,11 +10,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.teamtraverse.tottho.R;
 
@@ -125,11 +127,13 @@ public class UX {
     //endregion
 
     //region change searchView text hint color
-    public void changeSearchViewHintTextColor(SearchView searchView, int colorResId){
+    public void changeSearchViewHintAndTextColor(SearchView searchView, int colorResId){
         LinearLayout ll = (LinearLayout)searchView.getChildAt(0); LinearLayout ll2 = (LinearLayout)ll.getChildAt(2);
         LinearLayout ll3 = (LinearLayout)ll2.getChildAt(1);
         SearchView.SearchAutoComplete autoComplete = ((SearchView.SearchAutoComplete)ll3.getChildAt(0));
-        autoComplete.setHintTextColor(context.getResources().getColor(colorResId));
+        autoComplete.setHintTextColor(ContextCompat.getColor(context, colorResId));
+        EditText editText = (EditText)searchView.findViewById(R.id.search_src_text);
+        editText.setTextColor(ContextCompat.getColor(context,colorResId));
     }
     //endregion
 }
