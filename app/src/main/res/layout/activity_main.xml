@@ -150,33 +150,35 @@
                         <com.google.android.material.chip.ChipGroup
                             android:id="@+id/popularSearchesChipGroup"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp">
+                            android:layout_height="wrap_content">
 
                             <com.google.android.material.chip.Chip
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_600"
+                                app:chipBackgroundColor="@color/md_cyan_500"
                                 android:textColor="@color/md_white_1000"
                                 app:chipIcon="@drawable/ic_education"
+                                app:chipCornerRadius="8dp"
                                 app:chipIconTint="@color/md_white_1000"
                                 android:text="@string/education"/>
 
                             <com.google.android.material.chip.Chip
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_600"
+                                app:chipBackgroundColor="@color/md_cyan_500"
                                 android:textColor="@color/md_white_1000"
                                 app:chipIcon="@drawable/ic_scholarship"
                                 app:chipIconTint="@color/md_white_1000"
+                                app:chipCornerRadius="8dp"
                                 android:layout_marginLeft="8dp"
                                 android:text="@string/scholarships"/>
 
                             <com.google.android.material.chip.Chip
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_600"
+                                app:chipBackgroundColor="@color/md_cyan_500"
                                 android:textColor="@color/md_white_1000"
+                                app:chipCornerRadius="8dp"
                                 app:chipIcon="@drawable/ic_events"
                                 app:chipIconTint="@color/md_white_1000"
                                 android:layout_marginLeft="8dp"
@@ -185,8 +187,9 @@
                             <com.google.android.material.chip.Chip
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_600"
+                                app:chipBackgroundColor="@color/md_cyan_500"
                                 android:textColor="@color/md_white_1000"
+                                app:chipCornerRadius="8dp"
                                 app:chipIcon="@drawable/ic_government"
                                 app:chipIconTint="@color/md_white_1000"
                                 android:layout_marginLeft="8dp"

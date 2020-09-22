@@ -16,6 +16,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.activities.base.TourPageActivity;
 import com.teamtraverse.tottho.tools.PrefManager;
 import com.teamtraverse.tottho.tools.UtilsManager;
 
@@ -116,7 +117,7 @@ public class GenericAuthActivity extends AppCompatActivity {
         if(result.isSuccess()){
             setPref(result);
             Toast.makeText(this, "Sign in successful", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(GenericAuthActivity.this, MainActivity.class));
+            startActivity(new Intent(GenericAuthActivity.this, TourPageActivity.class));
         }else{
             Toast.makeText(getApplicationContext(),"Sign in cancel",Toast.LENGTH_LONG).show();
         }
