@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_white_1000"
-    tools:context=".activities.scholarship.ScholarshipActivity">
+    tools:context=".activities.scholarship.ScholarshipListActivity">
 
     <LinearLayout
         android:id="@+id/app_bar"
@@ -183,7 +183,7 @@
                 android:id="@+id/mRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/adapter_recycler_post"
+                tools:listitem="@layout/adapter_recycler_scholarship_list"
                 android:orientation="vertical" />
 
         </LinearLayout>

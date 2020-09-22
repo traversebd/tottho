@@ -60,4 +60,18 @@
     <string name="all_items">All Posts</string>
     <string name="scholarships">Scholarships</string>
     <string name="popular_searches">Popular searches</string>
+    <string name="scholarship_type">Scholarship Type</string>
+    <string name="post_date">Post Date</string>
+    <string name="min_read">min Read</string>
+    <string name="six_min_read">6 min read</string>
+    <string name="title">Title</string>
+    <string name="eligibility_demo">The requirements for a scholarship after you win typically involve keeping a certain GPA, continuing to demonstrate financial need or staying involved in an extracurricular sport or organization.</string>
+    <string name="apply_procedure">Most organizations will have online scholarship applications. Some will require that you contact them through the mail to request applications and other pertinent information</string>
+    <string name="scholarship_details">Scholarship Details</string>
+    <string name="description">Description</string>
+    <string name="eligibility">Eligibility</string>
+    <string name="how_to_apply">How to Apply</string>
+    <string name="official_contact">Official Contact</string>
+    <string name="address">Address</string>
+    <string name="website">Website</string>
 </resources>

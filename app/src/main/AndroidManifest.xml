@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teamtraverse.tottho">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.scholarship.ScholarshipDetailsActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".activities.base.auth.GenericAuthActivity"
             android:screenOrientation="unspecified"
@@ -41,7 +44,7 @@
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".activities.scholarship.ScholarshipActivity"
+            android:name=".activities.scholarship.ScholarshipListActivity"
             android:screenOrientation="unspecified"
             android:theme="@style/AppThemeNoActionBar" />
         <activity

@@ -19,7 +19,7 @@ import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.activities.government.GovernmentActivity;
 import com.teamtraverse.tottho.activities.profile.ProfileActivity;
-import com.teamtraverse.tottho.activities.scholarship.ScholarshipActivity;
+import com.teamtraverse.tottho.activities.scholarship.ScholarshipListActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     showActivity(EventsActivity.class);
                 }
                 else if (navDrawer.getIcon() == R.drawable.ic_scholarship){
-                    showActivity(ScholarshipActivity.class);
+                    showActivity(ScholarshipListActivity.class);
                 }
                 else if (navDrawer.getIcon() == R.drawable.ic_government){
                     showActivity(GovernmentActivity.class);

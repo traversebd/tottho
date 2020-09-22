@@ -8,18 +8,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.teamtraverse.tottho.R;
-import com.teamtraverse.tottho.activities.base.MainActivity;
 import com.teamtraverse.tottho.activities.base.TourPageActivity;
 import com.teamtraverse.tottho.tools.PrefManager;
-import com.teamtraverse.tottho.tools.UtilsManager;
-
 import static com.teamtraverse.tottho.tools.Constants.mIsLoggedIn;
 import static com.teamtraverse.tottho.tools.Constants.mShouldRemember;
 import static com.teamtraverse.tottho.tools.Constants.mUserEmail;
