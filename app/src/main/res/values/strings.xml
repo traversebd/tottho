@@ -74,4 +74,6 @@
     <string name="official_contact">Official Contact</string>
     <string name="address">Address</string>
     <string name="website">Website</string>
+    <string name="search">Search</string>
+    <string name="region">Region</string>
 </resources>

@@ -5,16 +5,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.models.scholarship.Scholarship;
+import java.util.Random;
 
 public class ScholarshipDetailsActivity extends AppCompatActivity {
     private Scholarship scholarship;
     private TextView title, postDate, eligibility, applyProcedure, officialAddress, officialMail, officialWebsite;
     private LinearLayout mainContainer;
+    private ImageView thumbnail;
+    private int[] thumbnailResIds = new int[]{R.drawable.scholarship_1,R.drawable.scholarship_2,R.drawable.scholarship_3,R.drawable.scholarship_4};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class ScholarshipDetailsActivity extends AppCompatActivity {
         officialAddress = findViewById(R.id.OfficialContactAddress);
         officialMail = findViewById(R.id.OfficialContactEmail);
         officialWebsite = findViewById(R.id.OfficialContactWebsite);
+        thumbnail = findViewById(R.id.thumbnail);
     }
     //endregion
 
@@ -64,6 +68,7 @@ public class ScholarshipDetailsActivity extends AppCompatActivity {
             officialAddress.setText(scholarship.getOfficialContactAddress());
             officialMail.setText(scholarship.getOfficialContactEmail());
             officialWebsite.setText(scholarship.getOfficialContactWebsite());
+            thumbnail.setImageResource(thumbnailResIds[new Random().nextInt(4)]);
         }
         else{
 

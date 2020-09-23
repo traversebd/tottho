@@ -11,7 +11,8 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:elevation="1dp"
         android:orientation="horizontal">
 
@@ -169,15 +170,66 @@
             android:layout_marginRight="24dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/md_cyan_800"
-                android:textStyle="bold"
-                android:textAllCaps="true"
-                android:padding="4dp"
-                android:text="@string/all_items"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/allPostsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/md_cyan_800"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:padding="4dp"
+                    android:text="@string/all_items"/>
+
+                <LinearLayout
+                    android:id="@+id/filterLayout"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:elevation="4dp"
+                    android:translationZ="2dp"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/a_roundbg">
+
+                    <ImageView
+                        android:id="@+id/FilterIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_filter"
+                        android:padding="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/refreshLayout"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:elevation="4dp"
+                    android:translationZ="2dp"
+                    android:layout_toLeftOf="@id/filterLayout"
+                    android:orientation="vertical"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/a_roundbg">
+
+                    <ImageView
+                        android:id="@+id/RefreshIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_refresh"
+                        android:padding="2dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mRecyclerView"

@@ -6,16 +6,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterScholarship;
 import com.teamtraverse.tottho.models.scholarship.Scholarship;
+import com.teamtraverse.tottho.tools.filter.ScholarshipSearchPanel;
+
 import java.util.ArrayList;
 
 public class ScholarshipListActivity extends AppCompatActivity {
     private RecyclerView scholarshipRecycler;
     private TextView totalItems;
+    private ImageView filterIcon, refreshIcon;
+    private ScholarshipSearchPanel scholarshipSearchPanel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,9 @@ public class ScholarshipListActivity extends AppCompatActivity {
     private void initUI(){
         scholarshipRecycler = findViewById(R.id.mRecyclerView);
         totalItems = findViewById(R.id.TotalItems);
+        filterIcon = findViewById(R.id.FilterIcon);
+        refreshIcon = findViewById(R.id.RefreshIcon);
+        scholarshipSearchPanel = new ScholarshipSearchPanel(this);
     }
     //endregion
 
@@ -52,6 +60,21 @@ public class ScholarshipListActivity extends AppCompatActivity {
 
         //region set recent link recycler adapter
         setGovernmentRecyclerAdapter();
+        //endregion
+
+        //region search panel listener
+        scholarshipSearchPanel.setPanelListener(new ScholarshipSearchPanel.searchPanelListener() {
+            @Override
+            public void onSearchClick(String searchText) {
+
+            }
+
+            @Override
+            public void onRefreshClick() {
+
+            }
+        });
+        scholarshipSearchPanel.initSearchPanel(filterIcon, refreshIcon);
         //endregion
     }
     //endregion
@@ -79,15 +102,15 @@ public class ScholarshipListActivity extends AppCompatActivity {
         scholarshipArrayList.add(new Scholarship(1,"University of Toronto Scholarship",
                 "Based on University",getString(R.string.post_description),getString(R.string.eligibility_demo),
                 "21-Nov-2020",getString(R.string.apply_procedure),"Benito Juarez Marg, South Campus",
-                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020",2));
+                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020","Asia",2));
         scholarshipArrayList.add(new Scholarship(2,"Top scholarships for Engineering student",
                 "Based on Field",getString(R.string.post_description),getString(R.string.eligibility_demo),
                 "21-Nov-2020",getString(R.string.apply_procedure),"Benito Juarez Marg, South Campus",
-                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020",5));
+                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020","Europe",5));
         scholarshipArrayList.add(new Scholarship(3,"Lester B.Pearson Scholarship",
                 "Based on Designation",getString(R.string.post_description),getString(R.string.eligibility_demo),
                 "21-Nov-2020",getString(R.string.apply_procedure),"Benito Juarez Marg, South Campus",
-                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020",6));
+                "vc@du.ac.in","http://du.ac.in/du/index.php?page=contact-us","22-Sep-2020","Middle East",6));
         return scholarshipArrayList;
     }
     //endregion

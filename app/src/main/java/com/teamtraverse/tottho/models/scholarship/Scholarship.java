@@ -15,13 +15,14 @@ public class Scholarship implements Parcelable {
     private String OfficialContactEmail;
     private String OfficialContactWebsite;
     private String PostDate;
+    private String Region;
     private int TimeToRead;
 
     public Scholarship() {
     }
 
     public Scholarship(int id, String title, String scholarshipType, String scholarshipDescription, String eligibility, String deadline, String applyProcedure,
-                       String officialContactAddress, String officialContactEmail, String officialContactWebsite, String postDate, int timeToRead) {
+                       String officialContactAddress, String officialContactEmail, String officialContactWebsite, String postDate, String region, int timeToRead) {
         Id = id;
         Title = title;
         ScholarshipType = scholarshipType;
@@ -33,6 +34,7 @@ public class Scholarship implements Parcelable {
         OfficialContactEmail = officialContactEmail;
         OfficialContactWebsite = officialContactWebsite;
         PostDate = postDate;
+        Region = region;
         TimeToRead = timeToRead;
     }
 
@@ -132,6 +134,14 @@ public class Scholarship implements Parcelable {
         TimeToRead = timeToRead;
     }
 
+    public String getRegion() {
+        return Region;
+    }
+
+    public void setRegion(String region) {
+        Region = region;
+    }
+
     @Override
     public String toString() {
         return "Scholarship{" +
@@ -146,6 +156,7 @@ public class Scholarship implements Parcelable {
                 ", OfficialContactEmail='" + OfficialContactEmail + '\'' +
                 ", OfficialContactWebsite='" + OfficialContactWebsite + '\'' +
                 ", PostDate='" + PostDate + '\'' +
+                ", Region='" + Region + '\'' +
                 ", TimeToRead=" + TimeToRead +
                 '}';
     }
@@ -163,6 +174,7 @@ public class Scholarship implements Parcelable {
         OfficialContactEmail = in.readString();
         OfficialContactWebsite = in.readString();
         PostDate = in.readString();
+        Region = in.readString();
         TimeToRead = in.readInt();
     }
 
@@ -196,6 +208,7 @@ public class Scholarship implements Parcelable {
         parcel.writeString(this.OfficialContactEmail);
         parcel.writeString(this.OfficialContactWebsite);
         parcel.writeString(this.PostDate);
+        parcel.writeString(this.Region);
         parcel.writeInt(this.TimeToRead);
     }
     //endregion

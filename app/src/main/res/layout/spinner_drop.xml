@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="40dp"
     android:drawableRight="@drawable/ic_arrow_down"
+    android:drawableTint="@color/md_white_1000"
     android:ellipsize="end"
     android:maxLines="1"
     android:textSize="14sp"
     android:layout_marginLeft="0dp"
-    android:textColor="@color/md_grey_800"
+    android:textColor="@color/md_white_1000"
     android:minHeight="?attr/listPreferredItemHeight"
     android:singleLine="false"
     />
