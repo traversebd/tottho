@@ -25,7 +25,7 @@ public class ScholarshipListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scholarship);
+        setContentView(R.layout.activity_scholarship_list);
 
         //region initUI and then perform all UI actions
         initUI();

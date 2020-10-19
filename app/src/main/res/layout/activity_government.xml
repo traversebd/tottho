@@ -100,8 +100,7 @@
                     android:layout_gravity="center"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    app:tint="@color/md_white_1000"
-                    android:src="@drawable/ic_education" />
+                    android:src="@drawable/ic_government" />
 
             </RelativeLayout>
 
