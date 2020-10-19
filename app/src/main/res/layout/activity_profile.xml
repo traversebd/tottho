@@ -145,25 +145,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape_light_cyan"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:paddingTop="4dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/md_grey_600"
+                        android:textColor="@color/md_grey_800"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_marginLeft="8dp"
                         android:textAllCaps="true"
                         android:textSize="12sp"
                         android:text="@string/number_of_post_saved"/>
@@ -185,16 +188,19 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/md_grey_600"
+                        android:textColor="@color/md_grey_800"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_marginLeft="8dp"
                         android:textAllCaps="true"
                         android:textSize="12sp"
                         android:text="@string/number_of_post_you_viewed"/>
