@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_white_1000"
+    android:background="@color/md_grey_50"
     tools:context=".activities.base.MainActivity">
 
     <LinearLayout
@@ -51,10 +51,130 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/SearchLayout"
+        android:id="@+id/PointLayout"
         android:layout_below="@id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:translationZ="1dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/md_white_1000"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layoutIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:elevation="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/rectangle_background_light_cyan"
+                android:gravity="center|left">
+
+                <ImageView
+                    android:id="@+id/badge"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_stars" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/pointBar"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:layout_marginLeft="8dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="6dp"
+                android:minHeight="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:progress="15"
+                android:progressDrawable="@drawable/seek_bar_style"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.6"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/earnedPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/point_sample_1"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="/"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/goalPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/point_sample_2"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/pts"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/forwardPoint"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:padding="4dp"
+                    app:tint="@color/md_grey_700"
+                    android:src="@drawable/ic_forward_ios" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SearchLayout"
+        android:layout_below="@id/PointLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
@@ -69,139 +189,133 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-            <RelativeLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_centerVertical="true"
+                android:layout_above="@id/TotthoHeading"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/md_cyan_800"/>
 
-                <TextView
+            <TextView
+                android:id="@+id/TotthoHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_here"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_above="@id/SearchText"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/md_cyan_800"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/SearchText"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                app:queryHint="@string/enter_your_query"
+                app:searchIcon="@drawable/ic_search"
+                app:closeIcon="@drawable/ic_close"
+                app:searchHintIcon="@drawable/ic_search"
+                android:textColor="@color/md_white_1000"
+                android:background="@drawable/rectangle_background_edit_text"/>
+
+            <TextView
+                android:id="@+id/PopularSearches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_searches"
+                android:layout_marginTop="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:gravity="center|left"
+                android:layout_below="@id/SearchText"
+                android:textColor="@color/md_cyan_800" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PopularSearches"
+                android:scrollbars="none"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
                     android:gravity="center"
-                    android:layout_centerVertical="true"
-                    android:layout_above="@id/TotthoHeading"
-                    android:layout_marginBottom="4dp"
-                    android:textColor="@color/md_cyan_800"/>
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/TotthoHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/search_here"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:gravity="center"
-                    android:layout_centerVertical="true"
-                    android:layout_above="@id/SearchText"
-                    android:layout_marginBottom="8dp"
-                    android:textColor="@color/md_cyan_800"/>
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/SearchText"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    app:queryHint="@string/enter_your_query"
-                    app:searchIcon="@drawable/ic_search"
-                    app:closeIcon="@drawable/ic_close"
-                    app:searchHintIcon="@drawable/ic_search"
-                    android:textColor="@color/md_white_1000"
-                    android:background="@drawable/rectangle_background_edit_text"/>
-
-                <TextView
-                    android:id="@+id/PopularSearches"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/popular_searches"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:gravity="center|left"
-                    android:layout_below="@id/SearchText"
-                    android:textColor="@color/md_cyan_800" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/PopularSearches"
-                    android:scrollbars="none"
-                    android:layout_centerHorizontal="true">
-
-                    <LinearLayout
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/popularSearchesChipGroup"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
 
-                        <com.google.android.material.chip.ChipGroup
-                            android:id="@+id/popularSearchesChipGroup"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/md_cyan_500"
+                            android:textColor="@color/md_white_1000"
+                            app:chipIcon="@drawable/ic_education"
+                            app:chipCornerRadius="8dp"
+                            app:chipIconTint="@color/md_white_1000"
+                            android:text="@string/education"/>
 
-                            <com.google.android.material.chip.Chip
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_500"
-                                android:textColor="@color/md_white_1000"
-                                app:chipIcon="@drawable/ic_education"
-                                app:chipCornerRadius="8dp"
-                                app:chipIconTint="@color/md_white_1000"
-                                android:text="@string/education"/>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/md_cyan_500"
+                            android:textColor="@color/md_white_1000"
+                            app:chipIcon="@drawable/ic_scholarship"
+                            app:chipIconTint="@color/md_white_1000"
+                            app:chipCornerRadius="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/scholarships"/>
 
-                            <com.google.android.material.chip.Chip
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_500"
-                                android:textColor="@color/md_white_1000"
-                                app:chipIcon="@drawable/ic_scholarship"
-                                app:chipIconTint="@color/md_white_1000"
-                                app:chipCornerRadius="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:text="@string/scholarships"/>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/md_cyan_500"
+                            android:textColor="@color/md_white_1000"
+                            app:chipCornerRadius="8dp"
+                            app:chipIcon="@drawable/ic_events"
+                            app:chipIconTint="@color/md_white_1000"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/events"/>
 
-                            <com.google.android.material.chip.Chip
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_500"
-                                android:textColor="@color/md_white_1000"
-                                app:chipCornerRadius="8dp"
-                                app:chipIcon="@drawable/ic_events"
-                                app:chipIconTint="@color/md_white_1000"
-                                android:layout_marginLeft="8dp"
-                                android:text="@string/events"/>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/md_cyan_500"
+                            android:textColor="@color/md_white_1000"
+                            app:chipCornerRadius="8dp"
+                            app:chipIcon="@drawable/ic_government"
+                            app:chipIconTint="@color/md_white_1000"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/government"/>
 
-                            <com.google.android.material.chip.Chip
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:chipBackgroundColor="@color/md_cyan_500"
-                                android:textColor="@color/md_white_1000"
-                                app:chipCornerRadius="8dp"
-                                app:chipIcon="@drawable/ic_government"
-                                app:chipIconTint="@color/md_white_1000"
-                                android:layout_marginLeft="8dp"
-                                android:text="@string/government"/>
+                    </com.google.android.material.chip.ChipGroup>
 
-                        </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
 
-                    </LinearLayout>
-
-                </HorizontalScrollView>
-            </RelativeLayout>
-
+            </HorizontalScrollView>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -228,7 +342,7 @@
                 app:cardCornerRadius="0dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardBackgroundColor="@color/md_grey_50"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout

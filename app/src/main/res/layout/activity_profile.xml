@@ -104,7 +104,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/Username"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -133,7 +133,7 @@
                     android:src="@drawable/ic_email"
                     app:tint="@color/md_cyan_600"/>
                 <TextView
-                    android:id="@+id/Email"
+                    android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/md_grey_600"

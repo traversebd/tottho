@@ -90,7 +90,7 @@
                     android:layout_marginRight="16dp">
 
                     <LinearLayout
-                        android:layout_below="@+id/emailAddress"
+                        android:layout_below="@+id/emailAddressText"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
@@ -100,7 +100,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/Email"
+                            android:id="@+id/email"
                             android:layout_width="match_parent"
                             android:layout_height="42dp"
                             android:layout_gravity="center_vertical"
@@ -118,7 +118,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/emailAddress"
+                        android:id="@+id/emailAddressText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="32dp"
@@ -145,7 +145,7 @@
                     android:layout_marginRight="16dp">
 
                     <LinearLayout
-                        android:layout_below="@+id/password"
+                        android:layout_below="@+id/passwordText"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
@@ -155,7 +155,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/Password"
+                            android:id="@+id/password"
                             android:layout_width="match_parent"
                             android:layout_height="42dp"
                             android:layout_gravity="center_vertical"
@@ -173,7 +173,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/password"
+                        android:id="@+id/passwordText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="32dp"

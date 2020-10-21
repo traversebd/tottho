@@ -76,4 +76,8 @@
     <string name="website">Website</string>
     <string name="search">Search</string>
     <string name="region">Region</string>
+    <string name="percentage_sample">70%</string>
+    <string name="point_sample_1">4200</string>
+    <string name="point_sample_2">5000</string>
+    <string name="pts">pts</string>
 </resources>
