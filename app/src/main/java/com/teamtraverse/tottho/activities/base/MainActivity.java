@@ -6,9 +6,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
+import android.widget.SeekBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +19,7 @@ import com.teamtraverse.tottho.activities.base.auth.GenericAuthActivity;
 import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.activities.government.GovernmentActivity;
+import com.teamtraverse.tottho.activities.points.PointDetailsActivity;
 import com.teamtraverse.tottho.activities.profile.ProfileActivity;
 import com.teamtraverse.tottho.activities.scholarship.ScholarshipListActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
@@ -28,7 +30,6 @@ import com.teamtraverse.tottho.tools.UX;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.ArrayList;
-
 import static com.teamtraverse.tottho.tools.Constants.REQUEST_CALL_CODE;
 import static com.teamtraverse.tottho.tools.UtilsManager.exitApp;
 
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView drawerButton;
     private RecyclerView navRecycler, recentlyViewedRecycler;
     private SearchView searchView;
+    private CardView pointLayout;
+    private SeekBar pointBar;
     private UX ux;
 
     @Override
@@ -64,13 +67,27 @@ public class MainActivity extends AppCompatActivity {
     private void initUI() {
         navRecycler = findViewById(R.id.list);
         drawerButton = findViewById(R.id.DrawerButton);
+        pointLayout = findViewById(R.id.pointLayout);
         recentlyViewedRecycler = findViewById(R.id.mRecyclerView);
         searchView = findViewById(R.id.SearchText);
+        pointBar = findViewById(R.id.pointBar);
         ux = new UX(this);
     }
     //endregion
 
     private void bindUIWithComponents() {
+        //region set seekBar not draggable
+        pointBar.setEnabled(false);
+        //endregion
+
+        //region point details click listener
+        pointLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PointDetailsActivity.class));
+            }
+        });
+        //endregion
 
         //region ask permission
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

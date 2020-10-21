@@ -51,7 +51,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/PointLayout"
+        android:id="@+id/pointLayout"
         android:layout_below="@id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/SearchLayout"
-        android:layout_below="@id/PointLayout"
+        android:layout_below="@id/pointLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

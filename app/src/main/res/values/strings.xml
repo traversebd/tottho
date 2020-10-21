@@ -80,4 +80,12 @@
     <string name="point_sample_1">4200</string>
     <string name="point_sample_2">5000</string>
     <string name="pts">pts</string>
+    <string name="point_details">Point Details</string>
+    <string name="my_points">My points</string>
+    <string name="status">Status</string>
+    <string name="silver">Silver</string>
+    <string name="progress_to_next_badge">Progress to next badge</string>
+    <string name="deals">Deals</string>
+    <string name="great_deals_are_coming_soon">Great deals are coming soon!</string>
+    <string name="stay_tuned">Stay Tuned!</string>
 </resources>
