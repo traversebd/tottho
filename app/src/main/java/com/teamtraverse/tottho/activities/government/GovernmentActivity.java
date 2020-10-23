@@ -9,9 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
-import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterPost;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
 import java.util.ArrayList;
 
 public class GovernmentActivity extends AppCompatActivity {

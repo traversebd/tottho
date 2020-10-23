@@ -1,7 +1,7 @@
-package com.teamtraverse.tottho.models.link;
+package com.teamtraverse.tottho.models.post;
 
 public class Post {
-    private int Id;
+    private int PostId;
     private String Name;
     private String Email;
     private String MobileNumber;
@@ -13,8 +13,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(int id, String name, String email, String mobileNumber, String webUrl, String address, int userId, String postDate) {
-        Id = id;
+    public Post(int postId, String name, String email, String mobileNumber, String webUrl, String address, int userId, String postDate) {
+        PostId = postId;
         Name = name;
         Email = email;
         MobileNumber = mobileNumber;
@@ -41,11 +41,11 @@ public class Post {
     }
 
     public int getId() {
-        return Id;
+        return PostId;
     }
 
     public void setId(int id) {
-        Id = id;
+        PostId = id;
     }
 
     public String getName() {

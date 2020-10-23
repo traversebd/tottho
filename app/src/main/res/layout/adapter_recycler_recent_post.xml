@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/demo_name"/>
 
             </LinearLayout>
@@ -128,8 +128,10 @@
                     android:layout_height="18dp"
                     android:layout_gravity="right|center"
                     android:layout_marginRight="4dp"
-                    android:src="@drawable/ic_heart_black"/>
+                    android:src="@drawable/ic_heart_black"
+                    app:tint="@color/md_cyan_600"/>
                 <TextView
+                    android:id="@+id/numberOfLikes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -152,8 +154,10 @@
                     android:layout_height="18dp"
                     android:layout_gravity="right|center"
                     android:layout_marginRight="4dp"
-                    android:src="@drawable/ic_share_black"/>
+                    android:src="@drawable/ic_share_black"
+                    app:tint="@color/md_cyan_600"/>
                 <TextView
+                    android:id="@+id/numberOfShares"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"

@@ -25,7 +25,7 @@ import com.teamtraverse.tottho.activities.scholarship.ScholarshipListActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentlyViewedLink;
 import com.teamtraverse.tottho.models.drawer.NavDrawer;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
 import com.teamtraverse.tottho.tools.UX;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
 
 import java.util.ArrayList;
 

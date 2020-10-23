@@ -196,7 +196,7 @@
                     android:layout_alignParentRight="true"
                     android:orientation="vertical"
                     android:layout_margin="4dp"
-                    android:background="@drawable/a_roundbg">
+                    android:background="@drawable/round_bg">
 
                     <ImageView
                         android:id="@+id/FilterIcon"
@@ -217,7 +217,7 @@
                     android:layout_toLeftOf="@id/filterLayout"
                     android:orientation="vertical"
                     android:layout_margin="4dp"
-                    android:background="@drawable/a_roundbg">
+                    android:background="@drawable/round_bg">
 
                     <ImageView
                         android:id="@+id/RefreshIcon"

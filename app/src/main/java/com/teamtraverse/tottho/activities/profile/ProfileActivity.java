@@ -5,16 +5,25 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
+
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
-import com.teamtraverse.tottho.activities.government.GovernmentActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterRecentPost;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
+import com.teamtraverse.tottho.tools.PrefManager;
+
 import java.util.ArrayList;
+
+import static com.teamtraverse.tottho.tools.Constants.mUserEmail;
+import static com.teamtraverse.tottho.tools.Constants.mUsername;
 
 public class ProfileActivity extends AppCompatActivity {
     private RecyclerView recentPostRecycler;
+    private PrefManager prefManager;
+    private TextView name, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +39,9 @@ public class ProfileActivity extends AppCompatActivity {
     //region initUI
     private void initUI(){
         recentPostRecycler = findViewById(R.id.mRecyclerView);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
+        prefManager = new PrefManager(this);
     }
     //endregion
 
@@ -46,6 +58,10 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this, MainActivity.class));
             }
         });
+        //endregion
+
+        //region set user basic profile details
+        setProfileDetails();
         //endregion
     }
     //endregion
@@ -66,6 +82,33 @@ public class ProfileActivity extends AppCompatActivity {
         postArrayList.add(new Post(1,"BUET","buet@edu.bd","+880-1739-574727","http://buet.diu.edu.bd/", "Shahbagh,Palashi,Dhaka",2,"30-Jun-2019"));
         postArrayList.add(new Post(1,"DMC","dhakamedicalcollege@edu.bd","+880-4512-574727","http://studentportal.diu.edu.bd/", "Sobahanbagh,Dhanmondi-27,Dhaka",2,"20-Aug-2018"));
         return postArrayList;
+    }
+    //endregion
+
+    //region set user basic profile details
+    private void setProfileDetails(){
+        if (prefManager.getString(mUsername) != null){
+            if (!TextUtils.isEmpty(prefManager.getString(mUsername))){
+                name.setText(prefManager.getString(mUsername));
+            }
+            else{
+                name.setText("No Name Found");
+            }
+        }
+        else{
+            name.setText("No Name Found");
+        }
+        if (prefManager.getString(mUserEmail) != null){
+            if (!TextUtils.isEmpty(prefManager.getString(mUserEmail))){
+                email.setText(prefManager.getString(mUserEmail));
+            }
+            else{
+                email.setText("No email found");
+            }
+        }
+        else{
+            email.setText("No email found");
+        }
     }
     //endregion
 

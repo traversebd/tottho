@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
 import com.teamtraverse.tottho.tools.PermissionManager;
 import java.util.ArrayList;
 

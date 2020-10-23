@@ -33,7 +33,7 @@
             android:elevation="8dp"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@drawable/a_roundbg"
+            android:background="@drawable/round_bg"
             android:translationZ="4dp">
 
             <ImageView

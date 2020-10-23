@@ -10,10 +10,8 @@ import android.widget.TextView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterPost;
-import com.teamtraverse.tottho.models.link.Post;
+import com.teamtraverse.tottho.models.post.Post;
 import java.util.ArrayList;
-
-import static com.teamtraverse.tottho.tools.UtilsManager.exitApp;
 
 public class EducationActivity extends AppCompatActivity {
     private RecyclerView educationRecycler;

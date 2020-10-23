@@ -34,9 +34,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="16dp"
+                android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center|left"
+                android:layout_marginLeft="2dp"
                 app:tint="@color/md_grey_600"
                 android:src="@drawable/ic_institute"/>
 
@@ -46,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/demo_name"
                 android:textColor="@color/md_grey_700"
-                android:layout_marginLeft="4dp"/>
+                android:layout_marginLeft="5dp"/>
 
         </LinearLayout>
 
@@ -167,7 +168,7 @@
             android:layout_marginLeft="8dp"
             android:elevation="8dp"
             android:orientation="vertical"
-            android:background="@drawable/a_roundbg"
+            android:background="@drawable/round_bg"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
