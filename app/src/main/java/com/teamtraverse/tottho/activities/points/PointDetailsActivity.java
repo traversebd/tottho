@@ -30,6 +30,7 @@ public class PointDetailsActivity extends AppCompatActivity {
     }
     //endregion
 
+    //region then perform all UI interactions
     private void bindUIWithComponents() {
         //region set seekBar not draggable
         pointBar.setEnabled(false);
