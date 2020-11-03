@@ -88,4 +88,10 @@
     <string name="deals">Deals</string>
     <string name="great_deals_are_coming_soon">Great deals are coming soon!</string>
     <string name="stay_tuned">Stay Tuned!</string>
+    <string name="bronze">BRONZE</string>
+    <string name="silver_status">SILVER</string>
+    <string name="gold">GOLD</string>
+    <string name="platinum">PLATINUM</string>
+    <string name="point_sample_3">1000</string>
+    <string name="point_sample_4">500</string>
 </resources>

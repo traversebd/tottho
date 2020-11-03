@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
@@ -40,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
     private SearchView searchView;
     private CardView pointLayout;
     private SeekBar pointBar;
+    private TextView earnedPoints, goalPoints;
     private UX ux;
+    private int earnedPointsInt, goalPointsInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         recentlyViewedRecycler = findViewById(R.id.mRecyclerView);
         searchView = findViewById(R.id.SearchText);
         pointBar = findViewById(R.id.pointBar);
+        earnedPoints = findViewById(R.id.earnedPoints);
+        goalPoints = findViewById(R.id.goalPoints);
         ux = new UX(this);
     }
     //endregion
@@ -80,11 +85,16 @@ public class MainActivity extends AppCompatActivity {
         pointBar.setEnabled(false);
         //endregion
 
+        //region get point details
+        earnedPointsInt = Integer.parseInt(earnedPoints.getText().toString());
+        goalPointsInt = Integer.parseInt(goalPoints.getText().toString());
+        //endregion
+
         //region point details click listener
         pointLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, PointDetailsActivity.class));
+                startActivity(new Intent(MainActivity.this, PointDetailsActivity.class).putExtra("earnedPoints",earnedPointsInt).putExtra("goalPoints",goalPointsInt));
             }
         });
         //endregion

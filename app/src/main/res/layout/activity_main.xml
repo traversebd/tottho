@@ -136,7 +136,7 @@
                             android:id="@+id/earnedPoints"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/point_sample_1"
+                            android:text="@string/point_sample_4"
                             android:textColor="@color/md_grey_600"
                             android:textSize="16sp"
                             android:textStyle="bold"/>
@@ -155,7 +155,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="4dp"
-                            android:text="@string/point_sample_2"
+                            android:text="@string/point_sample_3"
                             android:textColor="@color/md_grey_600"
                             android:textSize="16sp"
                             android:textStyle="bold"/>
@@ -286,7 +286,7 @@
                                 <com.google.android.material.chip.Chip
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:chipBackgroundColor="@color/md_cyan_500"
+                                    app:chipBackgroundColor="@color/md_cyan_700"
                                     android:textColor="@color/md_white_1000"
                                     app:chipIcon="@drawable/ic_education"
                                     app:chipCornerRadius="8dp"
@@ -296,7 +296,7 @@
                                 <com.google.android.material.chip.Chip
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:chipBackgroundColor="@color/md_cyan_500"
+                                    app:chipBackgroundColor="@color/md_cyan_700"
                                     android:textColor="@color/md_white_1000"
                                     app:chipIcon="@drawable/ic_scholarship"
                                     app:chipIconTint="@color/md_white_1000"
@@ -307,7 +307,7 @@
                                 <com.google.android.material.chip.Chip
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:chipBackgroundColor="@color/md_cyan_500"
+                                    app:chipBackgroundColor="@color/md_cyan_700"
                                     android:textColor="@color/md_white_1000"
                                     app:chipCornerRadius="8dp"
                                     app:chipIcon="@drawable/ic_events"
@@ -318,7 +318,7 @@
                                 <com.google.android.material.chip.Chip
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:chipBackgroundColor="@color/md_cyan_500"
+                                    app:chipBackgroundColor="@color/md_cyan_700"
                                     android:textColor="@color/md_white_1000"
                                     app:chipCornerRadius="8dp"
                                     app:chipIcon="@drawable/ic_government"
