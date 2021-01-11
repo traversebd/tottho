@@ -3,19 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="0dp"
     app:cardBackgroundColor="@color/md_white_1000"
-    app:cardElevation="4dp"
-    android:translationZ="2dp"
+    app:cardElevation="0dp"
+    android:translationZ="0dp"
     app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:orientation="vertical">
 
         <!--Post description section-->
@@ -35,10 +35,9 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="20dp"
+                    android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="2dp"
                     android:src="@drawable/ic_institute"
                     app:tint="@color/md_cyan_600"/>
 
@@ -47,6 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:text="@string/demo_name"/>
 
@@ -70,11 +70,11 @@
 
                 <TextView
                     android:id="@+id/Email"
-                    android:layout_below="@id/Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/demo_mail"/>
 
             </LinearLayout>
@@ -169,6 +169,12 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/md_grey_300"/>
 
     </LinearLayout>
 

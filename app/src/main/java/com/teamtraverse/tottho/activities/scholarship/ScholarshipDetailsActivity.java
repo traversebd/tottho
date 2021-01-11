@@ -50,7 +50,7 @@ public class ScholarshipDetailsActivity extends AppCompatActivity {
         findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ScholarshipDetailsActivity.this,ScholarshipListActivity.class));
+                onBackPressed();
             }
         });
         //endregion

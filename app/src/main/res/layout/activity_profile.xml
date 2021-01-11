@@ -100,16 +100,16 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="4dp"
-                        android:background="@drawable/rectangle_background_filled"
+                        android:background="@drawable/rectangle_background_user"
                         android:gravity="center|left">
 
                         <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:padding="8dp"
+                            android:padding="24dp"
                             android:scaleType="centerInside"
-                            android:src="@drawable/ic_user" />
+                            android:src="@drawable/ic_user"/>
 
                     </RelativeLayout>
 
@@ -155,7 +155,6 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/rectangle_shape_light_cyan"
                         android:orientation="horizontal"
                         android:weightSum="2"
                         android:layout_marginLeft="8dp"
@@ -174,7 +173,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/md_grey_800"
+                                android:textColor="@color/md_grey_600"
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textAllCaps="true"
@@ -191,7 +190,7 @@
                                 android:textSize="18sp"
                                 android:layout_marginTop="4dp"
                                 android:textColor="@color/md_cyan_800"
-                                android:text="@string/zero" />
+                                android:text="@string/dummy_post_count" />
 
                         </LinearLayout>
 
@@ -208,7 +207,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/md_grey_800"
+                                android:textColor="@color/md_grey_600"
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textAllCaps="true"
@@ -225,7 +224,7 @@
                                 android:layout_marginTop="4dp"
                                 android:gravity="center"
                                 android:textColor="@color/md_cyan_800"
-                                android:text="@string/zero" />
+                                android:text="@string/dummy_post_view" />
 
                         </LinearLayout>
 
@@ -250,37 +249,20 @@
                     android:orientation="vertical"
                     android:layout_margin="8dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/label1"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        android:paddingBottom="4dp"
-                        android:paddingTop="4dp">
-
-                        <View
-                            android:id="@+id/label1"
-                            android:layout_width="8dp"
-                            android:layout_height="32dp"
-                            android:background="@color/md_cyan_600" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@+id/label1"
-                            android:layout_centerInParent="true"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="6dp"
-                            android:layout_marginBottom="6dp"
-                            android:layout_toEndOf="@+id/label1"
-                            android:layout_toRightOf="@+id/label1"
-                            android:text="@string/recent_posts_by_you"
-                            android:textColor="@color/md_blue_grey_600"
-                            android:textSize="14sp" />
-
-                    </RelativeLayout>
+                        android:layout_marginTop="6dp"
+                        android:layout_toEndOf="@+id/label1"
+                        android:layout_toRightOf="@+id/label1"
+                        android:text="@string/recent_posts_by_you"
+                        android:textColor="@color/md_grey_700"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/mRecyclerView"

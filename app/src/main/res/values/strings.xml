@@ -94,4 +94,7 @@
     <string name="platinum">PLATINUM</string>
     <string name="point_sample_3">1000</string>
     <string name="point_sample_4">500</string>
+    <string name="post_details">Post Details</string>
+    <string name="dummy_post_count">75</string>
+    <string name="dummy_post_view">45k</string>
 </resources>
