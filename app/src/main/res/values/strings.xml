@@ -97,4 +97,8 @@
     <string name="post_details">Post Details</string>
     <string name="dummy_post_count">75</string>
     <string name="dummy_post_view">45k</string>
+    <string name="dummy_email">shakil.py@gmail.com</string>
+    <string name="dummy_title">Daffodil International University</string>
+    <string name="dummy_website">diu.edu.bd</string>
+    <string name="dummy_address">Sukrabad,Dhanmond-32</string>
 </resources>

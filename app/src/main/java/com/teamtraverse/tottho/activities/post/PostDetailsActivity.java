@@ -5,16 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.databinding.ActivityPostDetailsBinding;
 
 public class PostDetailsActivity extends AppCompatActivity {
+    private ActivityPostDetailsBinding activityPostDetailsBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post_details);
+        activityPostDetailsBinding = DataBindingUtil.setContentView(this, R.layout.activity_post_details);
 
         //region initUI and then perform all UI actions
         initUI();
@@ -30,7 +33,7 @@ public class PostDetailsActivity extends AppCompatActivity {
     //region perform all UI interactions
     private void bindUIWithComponents(){
         //region back button click listener
-        findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
+        activityPostDetailsBinding.BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
