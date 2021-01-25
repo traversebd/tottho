@@ -21,6 +21,7 @@ import com.teamtraverse.tottho.activities.education.EducationActivity;
 import com.teamtraverse.tottho.activities.events.EventsActivity;
 import com.teamtraverse.tottho.activities.government.GovernmentActivity;
 import com.teamtraverse.tottho.activities.points.PointDetailsActivity;
+import com.teamtraverse.tottho.activities.post.PostDetailsActivity;
 import com.teamtraverse.tottho.activities.profile.ProfileActivity;
 import com.teamtraverse.tottho.activities.scholarship.ScholarshipListActivity;
 import com.teamtraverse.tottho.adapters.NavDrawerRecyclerAdapter;
@@ -188,6 +189,13 @@ public class MainActivity extends AppCompatActivity {
         recentlyViewedRecycler.setLayoutManager(new LinearLayoutManager(this));
         recentlyViewedRecycler.setAdapter(recyclerAdapter);
         recyclerAdapter.notifyDataSetChanged();
+
+        recyclerAdapter.setOnItemClickListener(new RecyclerAdapterRecentlyViewedLink.onItemClickListener() {
+            @Override
+            public void onItemClick(Post post) {
+                startActivity(new Intent(MainActivity.this, PostDetailsActivity.class).putExtra("post", post));
+            }
+        });
     }
     //endregion
 

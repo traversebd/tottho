@@ -1,125 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/md_white_1000"
-    tools:context=".activities.education.EducationActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:elevation="1dp"
-        android:translationZ="2dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/md_white_1000"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/BackButton"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="16dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_left_arrow_new"
-            app:tint="@color/md_cyan_600"
-            android:padding="8dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/point_details"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/md_cyan_600"/>
-
-    </LinearLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_below="@id/app_bar"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:orientation="vertical">
+        android:background="@color/md_white_1000"
+        tools:context=".activities.education.EducationActivity">
 
         <LinearLayout
-            android:id="@+id/mainContainer"
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:elevation="1dp"
+            android:translationZ="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/md_white_1000"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/BackButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_left_arrow_new"
+                app:tint="@color/md_cyan_600"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/point_details"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_cyan_600"/>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:fillViewport="true"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/pointLayout"
-                android:layout_below="@id/app_bar"
+            <LinearLayout
+                android:id="@+id/mainContainer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:translationZ="1dp"
-                app:cardElevation="1dp"
-                app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/md_white_1000"
-                app:cardUseCompatPadding="true">
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pointLayout"
+                    android:layout_below="@id/app_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:translationZ="1dp"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/md_white_1000"
+                    app:cardUseCompatPadding="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_weight="2">
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/my_points"
-                                android:textSize="16sp"
-                                android:textColor="@color/md_grey_800"/>
+                            android:orientation="horizontal"
+                            android:layout_weight="2">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="4dp">
+                                android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/earnedPoints"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/point_sample_1"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/my_points"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/md_grey_800"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="4dp">
+
+                                    <TextView
+                                        android:id="@+id/earnedPoints"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/point_sample_1"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/md_grey_800"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="@string/pts"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/md_grey_800"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:background="@color/md_cyan_600"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/status"
+                                    android:textSize="16sp"
                                     android:textColor="@color/md_grey_800"/>
 
                                 <TextView
+                                    android:id="@+id/pointStatus"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="4dp"
-                                    android:text="@string/pts"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/silver"
                                     android:textSize="24sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/md_grey_800"/>
@@ -128,175 +170,138 @@
 
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="2dp"
-                            android:layout_height="48dp"
+                        <SeekBar
+                            android:id="@+id/pointBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
                             android:layout_gravity="center"
-                            android:background="@color/md_cyan_600"/>
+                            android:maxHeight="6dp"
+                            android:minHeight="6dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:progress="15"
+                            android:progressDrawable="@drawable/seek_bar_style"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/custom_thumb" />
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:orientation="horizontal"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:layout_marginTop="4dp">
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/status"
-                                android:textSize="16sp"
-                                android:textColor="@color/md_grey_800"/>
-
-                            <TextView
-                                android:id="@+id/pointStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/silver"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
+                                android:text="@string/progress_to_next_badge"
+                                android:textSize="14sp"
                                 android:textColor="@color/md_grey_800"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:text="-"
+                                android:textSize="14sp"
+                                android:textColor="@color/md_grey_800"/>
+
+                            <TextView
+                                android:id="@+id/earnedPointsAgain"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/point_sample_1"
+                                android:textColor="@color/md_grey_600"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:text="/"
+                                android:textColor="@color/md_grey_600"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/goalPoints"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:text="@string/point_sample_2"
+                                android:textColor="@color/md_grey_600"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
                     </LinearLayout>
 
-                    <SeekBar
-                        android:id="@+id/pointBar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_gravity="center"
-                        android:maxHeight="6dp"
-                        android:minHeight="6dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:progress="15"
-                        android:progressDrawable="@drawable/seek_bar_style"
-                        android:splitTrack="false"
-                        android:thumb="@drawable/custom_thumb" />
+                </androidx.cardview.widget.CardView>
 
-                    <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="@string/deals"
+                        android:layout_marginTop="16dp"
                         android:paddingTop="4dp"
                         android:paddingBottom="4dp"
-                        android:orientation="horizontal"
+                        android:paddingLeft="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_cyan_800"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/great_deals_are_coming_soon"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_marginTop="4dp">
+                        android:textColor="@color/md_grey_800"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/progress_to_next_badge"
-                            android:textSize="14sp"
-                            android:textColor="@color/md_grey_800"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp"
+                        android:src="@drawable/coming_soon"
+                        android:scaleType="centerInside"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:text="-"
-                            android:textSize="14sp"
-                            android:textColor="@color/md_grey_800"/>
-
-                        <TextView
-                            android:id="@+id/earnedPointsAgain"
-                            android:layout_width="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/point_sample_1"
-                            android:textColor="@color/md_grey_600"
-                            android:textSize="16sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:text="/"
-                            android:textColor="@color/md_grey_600"
-                            android:textSize="16sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/goalPoints"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:text="@string/point_sample_2"
-                            android:textColor="@color/md_grey_600"
-                            android:textSize="16sp"
-                            android:textStyle="bold"/>
-
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stay_tuned"
+                        android:layout_marginTop="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_grey_800"/>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/deals"
-                    android:layout_marginTop="16dp"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:paddingLeft="4dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    android:textColor="@color/md_cyan_800"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/great_deals_are_coming_soon"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/md_grey_800"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="290dp"
-                    android:src="@drawable/coming_soon"
-                    android:scaleType="centerInside"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/stay_tuned"
-                    android:layout_marginTop="16dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    android:textColor="@color/md_grey_800"/>
-
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 
-</RelativeLayout>
+</layout>

@@ -4,20 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.databinding.ActivityPointDetailsBinding;
 
 public class PointDetailsActivity extends AppCompatActivity {
+    private ActivityPointDetailsBinding activityPointDetailsBinding;
     private SeekBar pointBar;
     private int earnedPointsInt = 0, goalPointsInt = 0;
-    private TextView earnedPoints, goalPoints, pointStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_point_details);
+        activityPointDetailsBinding = DataBindingUtil.setContentView(this, R.layout.activity_point_details);
 
         //region get intent data
         getIntentData();
@@ -43,9 +46,6 @@ public class PointDetailsActivity extends AppCompatActivity {
 
     //region init ui and then perform all UI interactions
     private void initUI() {
-        earnedPoints = findViewById(R.id.earnedPoints);
-        goalPoints = findViewById(R.id.goalPoints);
-        pointStatus = findViewById(R.id.pointStatus);
         pointBar = findViewById(R.id.pointBar);
     }
     //endregion
@@ -57,16 +57,16 @@ public class PointDetailsActivity extends AppCompatActivity {
         //endregion
 
         //region set point details
-        earnedPoints.setText(""+earnedPointsInt);
-        goalPoints.setText(""+goalPointsInt);
+        activityPointDetailsBinding.earnedPoints.setText(""+earnedPointsInt);
+        activityPointDetailsBinding.goalPoints.setText(""+goalPointsInt);
         setPointStatus();
         //endregion
 
         //region back arrow click listener
-        findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
+        activityPointDetailsBinding.BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PointDetailsActivity.this, MainActivity.class));
+                onBackPressed();
             }
         });
         //endregion
@@ -76,16 +76,16 @@ public class PointDetailsActivity extends AppCompatActivity {
     //region set point status, Example as silver, bronze etc
     private void setPointStatus(){
         if (earnedPointsInt <= 500 && earnedPointsInt > 0){
-            pointStatus.setText(R.string.bronze);
+            activityPointDetailsBinding.pointStatus.setText(R.string.bronze);
         }
         else if (earnedPointsInt <= 1000 && earnedPointsInt > 500){
-            pointStatus.setText(R.string.silver_status);
+            activityPointDetailsBinding.pointStatus.setText(R.string.silver_status);
         }
         else if (earnedPointsInt <= 1500 && earnedPointsInt > 1000){
-            pointStatus.setText(R.string.gold);
+            activityPointDetailsBinding.pointStatus.setText(R.string.gold);
         }
         else if (earnedPointsInt <= 2000 && earnedPointsInt > 1500){
-            pointStatus.setText(R.string.platinum);
+            activityPointDetailsBinding.pointStatus.setText(R.string.platinum);
         }
     }
     //endregion

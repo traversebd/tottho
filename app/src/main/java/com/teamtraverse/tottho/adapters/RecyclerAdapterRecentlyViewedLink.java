@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.teamtraverse.tottho.R;
@@ -27,6 +28,15 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
     public RecyclerAdapterRecentlyViewedLink(ArrayList<Post> listOfPosts, Context context) {
         this.listOfPosts = listOfPosts;
         this.context = context;
+    }
+
+    private onItemClickListener onItemClickListener;
+    public interface onItemClickListener{
+        void onItemClick(Post post);
+    }
+
+    public void setOnItemClickListener(onItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -60,6 +70,15 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
             }
         });
         //endregion
+
+        holder.item_card_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemClickListener != null){
+                    onItemClickListener.onItemClick(post);
+                }
+            }
+        });
     }
 
     @Override
@@ -70,6 +89,7 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView Name,Email,MobileNumber,WebUrl,Address;
         ImageView callIcon;
+        CardView item_card_view;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             Name = itemView.findViewById(R.id.Name);
@@ -78,6 +98,7 @@ public class RecyclerAdapterRecentlyViewedLink extends RecyclerView.Adapter<Recy
             WebUrl = itemView.findViewById(R.id.WebsiteLink);
             Address = itemView.findViewById(R.id.Address);
             callIcon = itemView.findViewById(R.id.callIcon);
+            item_card_view = itemView.findViewById(R.id.item_card_view);
         }
     }
 }

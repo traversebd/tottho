@@ -1,6 +1,9 @@
 package com.teamtraverse.tottho.models.post;
 
-public class Post {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Post implements Parcelable {
     private int PostId;
     private String Name;
     private String Email;
@@ -23,6 +26,46 @@ public class Post {
         UserId = userId;
         PostDate = postDate;
     }
+
+    protected Post(Parcel in) {
+        PostId = in.readInt();
+        Name = in.readString();
+        Email = in.readString();
+        MobileNumber = in.readString();
+        WebUrl = in.readString();
+        Address = in.readString();
+        UserId = in.readInt();
+        PostDate = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(PostId);
+        dest.writeString(Name);
+        dest.writeString(Email);
+        dest.writeString(MobileNumber);
+        dest.writeString(WebUrl);
+        dest.writeString(Address);
+        dest.writeInt(UserId);
+        dest.writeString(PostDate);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Post> CREATOR = new Creator<Post>() {
+        @Override
+        public Post createFromParcel(Parcel in) {
+            return new Post(in);
+        }
+
+        @Override
+        public Post[] newArray(int size) {
+            return new Post[size];
+        }
+    };
 
     public int getUserId() {
         return UserId;

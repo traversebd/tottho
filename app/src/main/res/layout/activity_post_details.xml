@@ -4,6 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable name="post" type="com.teamtraverse.tottho.models.post.Post"/>
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -94,7 +98,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/dummy_title"
+                            android:text="@{post.name}"
+                            android:hint="@string/dummy_title"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>
@@ -137,7 +142,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/dummy_email"
+                            android:text="@{post.email}"
+                            android:hint="@string/dummy_email"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>
@@ -180,7 +186,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/demo_mobile"
+                            android:text="@{post.mobileNumber}"
+                            android:hint="@string/demo_mobile"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>
@@ -223,7 +230,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/dummy_website"
+                            android:text="@{post.webUrl}"
+                            android:hint="@string/dummy_website"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>
@@ -266,7 +274,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/dummy_address"
+                            android:text="@{post.address}"
+                            android:hint="@string/dummy_address"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>
@@ -309,7 +318,8 @@
                             android:paddingTop="8dp"
                             android:paddingBottom="8dp"
                             android:paddingLeft="8dp"
-                            android:text="@string/date_hint"
+                            android:text="@{post.postDate}"
+                            android:hint="@string/date_hint"
                             android:textSize="16sp"
                             android:textColor="@color/md_cyan_600"
                             android:textStyle="bold"/>

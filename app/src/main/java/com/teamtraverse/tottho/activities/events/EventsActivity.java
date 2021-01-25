@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import com.teamtraverse.tottho.R;
 import com.teamtraverse.tottho.activities.base.MainActivity;
+import com.teamtraverse.tottho.activities.education.EducationActivity;
+import com.teamtraverse.tottho.activities.post.PostDetailsActivity;
 import com.teamtraverse.tottho.adapters.RecyclerAdapterPost;
 import com.teamtraverse.tottho.models.post.Post;
 import java.util.ArrayList;
@@ -45,7 +47,7 @@ public class EventsActivity extends AppCompatActivity {
         findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(EventsActivity.this, MainActivity.class));
+                onBackPressed();
             }
         });
         //endregion
@@ -62,6 +64,13 @@ public class EventsActivity extends AppCompatActivity {
         eventsRecycler.setLayoutManager(new LinearLayoutManager(this));
         eventsRecycler.setAdapter(recyclerAdapter);
         recyclerAdapter.notifyDataSetChanged();
+
+        recyclerAdapter.setOnItemClickListener(new RecyclerAdapterPost.onItemClickListener() {
+            @Override
+            public void onItemClick(Post post) {
+                startActivity(new Intent(EventsActivity.this, PostDetailsActivity.class).putExtra("post", post));
+            }
+        });
     }
     //endregion
 
